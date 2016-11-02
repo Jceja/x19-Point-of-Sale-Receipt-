@@ -17,8 +17,8 @@ if (isNaN(newItem)) {
   newItem=Number(newItem);
   runningTotal= runningTotal + newItem;
   var dollars = asCurrency(runningTotal);
-  document.getElementById("subtotal").innerHTML=dollars
-  document.getElementById("price").innerHTML=" "
+  document.getElementById("subtotal").innerHTML=dollars;
+  document.getElementById("price").innerHTML=" ";
   setCookie("preTax", runningTotal);
   // update newItem to its value cast as a number
   // update runningTotal to be its value plus newItem
