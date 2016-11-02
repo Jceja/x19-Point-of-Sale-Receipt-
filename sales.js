@@ -18,7 +18,7 @@ if (isNaN(newItem)) {
   runningTotal= runningTotal + newItem;
   var dollars = asCurrency(runningTotal);
   document.getElementById("subtotal").innerHTML=dollars;
-  document.getElementById("price").innerHTML=" ";
+  document.getElementById("price").innerHTML="";
   setCookie("preTax", runningTotal);
   // update newItem to its value cast as a number
   // update runningTotal to be its value plus newItem
@@ -39,9 +39,9 @@ function calculateReceipt(){
   var receiptSubtotal = getCookie("preTax");
   var receiptTax = receiptSubtotal * 0.075;
   var receiptTotal = receiptSubtotal + receiptTax;
-  document.getElementById("sub").innerHTML= receiptSubtotal;
-  document.getElementById("tax").innerHTML= receiptTax;
-  document.getElementById("tot").innerHTML= receiptTotal;
+  document.getElementById("sub").innerHTML= ("$") + receiptSubtotal;
+  document.getElementById("tax").innerHTML=("$") receiptTax;
+  document.getElementById("tot").innerHTML= ("$")receiptTotal;
 
 }
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
